@@ -40,8 +40,6 @@ app.post('/mail', function(req,res){
     res.send(200);
 });
 
-
-
 app.get('/', function(req,res){
     res.sendFile(path.resolve('./server/public/views/index.html'));
 });
@@ -49,3 +47,5 @@ app.get('/', function(req,res){
 app.listen(app.get('port'), function(){
     console.log('Listening on port: ', app.get('port'));
 });
+
+module.exports = app;
