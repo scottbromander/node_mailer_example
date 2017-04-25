@@ -5,6 +5,9 @@ myApp.controller('MailController', ['MailService', function(MailService){
 
     mailer.submitForm = function(info){
         MailService.sendEmail(info);
+        mailer.toEmail = '';
+        mailer.subject = '';
+        mailer.message = '';
     };
 }]);
 
