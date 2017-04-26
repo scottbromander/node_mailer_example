@@ -21,9 +21,11 @@ var transporter = nodemailer.createTransport({
 
 app.post('/mail', function(req,res){
     var mailer = req.body;
+    console.log(mailer);
 
     var mailOptions = {
-        from: '', // sender address -> //YOUR GMAIL USER HERE -> EXAMPLE@gmail.com
+//example: from: '"Scott" scott@primeacademy.io',
+        from: '', // sender address -> //YOUR GMAIL USER HERE IN STRING + email not in string! -> EXAMPLE@gmail.com
         to: mailer.toEmail, // list of receivers
         subject: mailer.subject, // Subject line
         text: mailer.message, // plain text body

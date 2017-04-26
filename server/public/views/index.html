@@ -8,13 +8,13 @@
     <script type="text/javascript" src="/scripts/client.js"></script>
   </head>
   <body ng-controller="MailController as mailer">
-      <form novalidate ng-submit="mailer.submitForm(mailer)">
+      <form novalidate ng-submit="mailer.submitForm(mailer.mailObject)">
         Send Email To:<br>
-        <input type="text" ng-model="mailer.toEmail"><br>
+        <input type="text" ng-model="mailer.mailObject.toEmail"><br>
         Subject:<br>
-        <input type="text" ng-model="mailer.subject"><br>
+        <input type="text" ng-model="mailer.mailObject.subject"><br>
         Message:<br>
-        <input type="text" ng-model="mailer.message"><br>
+        <input type="text" ng-model="mailer.mailObject.message"><br>
         <button>Submit</button><br>
         <br>
       </form>

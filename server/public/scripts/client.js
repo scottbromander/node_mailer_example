@@ -5,9 +5,6 @@ myApp.controller('MailController', ['MailService', function(MailService){
 
     mailer.submitForm = function(info){
         MailService.sendEmail(info);
-        mailer.toEmail = '';
-        mailer.subject = '';
-        mailer.message = '';
     };
 }]);
 
@@ -15,7 +12,7 @@ myApp.factory('MailService', ['$http', function($http){
   return {
     sendEmail: function(info){
       $http.post('/mail', info).then(function(response){
-        console.log(response.data);
+        console.log("Email has been sent: ", response.data);
       });
     }
   };
